@@ -1,0 +1,196 @@
+/*
+===========
+  Global
+===========
+*/
+
+:root {
+  --clr-bg: #222;
+  --clr-bg-win: #60b347;
+  --clr-grey-light: #eee;
+  --clr-grey-dark: #ccc;
+  --ff: 'Press Start 2P', cursive;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%; /* 1rem =  10px */
+  font-family: var(--ff);
+  background: var(--clr-bg);
+  color: var(--clr-grey-light);
+}
+
+input {
+  font-family: inherit;
+}
+
+.btn {
+  background: var(--clr-grey-light);
+  color: var(--clr-bg);
+  font-family: inherit;
+  display: block;
+  padding: 1.2rem 1.6rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  border: none;
+  transform: translateY(-2px);
+  transition: all 0.1s;
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/*
+===============
+  HEADER
+===============
+*/
+.header {
+  min-height: 35vh;
+  border-bottom: 5px solid var(--clr-grey-light);
+  position: relative;
+}
+
+.header-top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.6rem 0.8rem;
+}
+
+.title {
+  font-size: 2.4rem;
+  text-transform: capitalize;
+  text-align: center;
+  margin-top: 2.4rem;
+}
+
+.instruction {
+  font-size: 1rem;
+}
+
+.random-number {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  background: var(--clr-grey-light);
+  color: var(--clr-bg);
+  font-size: 4rem;
+  padding: 2rem 4rem;
+  transform: translate(-50%, 50%);
+}
+
+/*
+===============
+  MAIN
+===============
+*/
+.main {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30rem;
+}
+
+.input-number {
+  display: inline-block;
+  width: 18rem;
+  height: 8rem;
+  border: 3px solid var(--clr-grey-light);
+  color: var(--clr-grey-light);
+  font-size: 3.2rem;
+  text-align: center;
+  background: transparent;
+  padding: 1rem;
+  margin-bottom: 2.4rem;
+}
+
+.section-right p {
+  font-size: 1.2rem;
+}
+
+.result {
+  margin-bottom: 8rem;
+  align-self: flex-start;
+}
+
+.score {
+  align-self: flex-start;
+}
+
+.score p:first-child {
+  margin-bottom: 1.6rem;
+}
+
+/*
+===============
+  MEDIA QUERY
+===============
+*/
+@media screen and (max-width: 640px) {
+  .btn {
+    padding: 1.2rem 1.6rem;
+    padding: 1.2rem;
+    font-size: 1.2rem;
+  }
+
+  .title {
+    font-size: 2.1rem;
+    line-height: 1.5;
+  }
+
+  .instruction {
+    font-size: 0.85rem;
+  }
+
+  .random-number {
+    font-size: 3rem;
+    padding: 1.6rem 3.2rem;
+  }
+
+  .main {
+    flex-direction: column;
+    margin-top: 6.4rem;
+    justify-content: flex-start;
+  }
+
+  .input-number {
+    width: 16rem;
+    height: 7rem;
+    font-size: 2.8rem;
+  }
+
+  .section-left {
+    margin-bottom: 3.2rem;
+  }
+
+  .section-right p {
+    font-size: 1.2rem;
+  }
+  .result {
+    margin-bottom: 4rem;
+    align-self: center;
+  }
+
+  .score {
+    align-self: center;
+  }
+}
